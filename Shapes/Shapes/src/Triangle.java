@@ -29,5 +29,7 @@ public class Triangle {
     private boolean isRightAngel( double sideA, double sideB, double sideC ) {
 
         double maxSide = Math.max( sideA, Math.max( sideB, sideC ));
+        
+        return true;
     }
 }
