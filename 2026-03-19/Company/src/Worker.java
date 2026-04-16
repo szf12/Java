@@ -18,4 +18,20 @@ public class Worker {
         born = "";
         hire = "";
     }
+
+    public String getName() { return name; }
+    public String getCity() { return city; }
+    public String getAddress() { return address; }
+    public String getSalary() { return salary; }
+    public String getBonus() { return bonus; }
+    public String getBorn() { return born; }
+    public String getHire() { return hire; }
+
+    public void setName( String text ) { name = text; } 
+    public void setCity( String text ) { city = text; } 
+    public void setAddress( String text ) { address = text; } 
+    public void setSalary( String text ) { salary = text; } 
+    public void setBonus( String text ) { bonus = text; } 
+    public void setBorn( String text ) { born = text; } 
+    public void setHire( String text ) { hire = text; } 
 }

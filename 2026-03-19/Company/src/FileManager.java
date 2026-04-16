@@ -1,5 +1,7 @@
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -17,6 +19,7 @@ public class FileManager {
         } catch ( FileNotFoundException exception ) {
             
             System.out.println( "Nincs meg a fájl" );
+            System.out.println( exception.getMessage() );
         }
 
         return workers;
@@ -35,16 +38,46 @@ public class FileManager {
             String row = scan.nextLine();
             String[] rowSp = row.split( ":" );
 
-            worker.name = rowSp[ 0 ];
-            worker.city = rowSp[ 1 ];
-            worker.address = rowSp[ 2 ];
-            worker.salary = rowSp[ 3 ];
-            worker.bonus = rowSp[ 4 ];
-            worker.born = rowSp[ 5 ];
-            worker.hire = rowSp[ 6 ];
+            worker.setName( rowSp[ 0 ] );
+            worker.setCity( rowSp[ 1 ] );
+            worker.setAddress( rowSp[ 2 ] );
+            worker.setSalary( rowSp[ 3 ] );
+            worker.setBonus ( rowSp[ 4 ] );
+            worker.setBorn( rowSp[ 5 ] );
+            worker.setHire ( rowSp[ 6 ] );
 
             workers.add( worker );
         }
         return workers;
+    }
+
+    public boolean writeGyorSalary( String salary ) {
+
+        FileWriter fWriter = null;
+        try {
+            
+            write( salary, fWriter );
+
+            return true;
+
+        } catch ( IOException exception ) {
+            
+            System.out.println( "Hiba az írás során" );
+
+            return false;
+
+        }
+    }
+
+    private boolean write( String salary, FileWriter fWriter ) throws IOException {
+
+        fWriter = new FileWriter( "Gyor.txt", false );
+
+        fWriter.write( "Győri dolgozók fizetése:\n");
+        fWriter.write( salary );
+
+        fWriter.close();
+
+        return true;
     }
 }
