@@ -40,7 +40,17 @@ public class PizzaManager {
     }
 
     private void getBuyers() {
+/* 
+        String name = "Hófehérke";
+        String address = "Kerekerdő 11"
 
+        INSERT INTO vevok ( vevonev, cim ) VALUES
+        ( "\"" + name + "\"", "\" + address + "\"");
+
+        INSERT INTO vevok ( vevonev, cim ) VALUES
+        ( "Hófehérke", "Kerekerdő 11");
+
+*/
         String sql = "SELECT * FROM vevok;";
 
         Statement stmt = null;
