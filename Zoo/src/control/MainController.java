@@ -1,0 +1,25 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package control;
+
+/**
+ *
+ * @author tanar
+ */
+public class MainController {
+    
+    private FormController formCrl;
+
+    public MainController() {
+        
+        start();
+    }
+   
+   private void start() {
+       
+       formCrl = new FormController();
+       formCrl.start();
+   } 
+}
