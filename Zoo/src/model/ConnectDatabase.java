@@ -12,7 +12,7 @@ public class ConnectDatabase {
     
     private Connection conn;
 
-    ConnectDatabase() {
+    public ConnectDatabase() {
 
         conn = null;
     }

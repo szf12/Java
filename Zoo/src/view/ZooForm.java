@@ -177,7 +177,7 @@ public class ZooForm extends javax.swing.JFrame {
 
         southPnl.add(jPanel3);
 
-        jPanel4.setLayout(new java.awt.FlowLayout(2, 20, 0));
+        jPanel4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 20, 0));
 
         exitBtn.setText("Kilépés");
         exitBtn.setPreferredSize(new java.awt.Dimension(100, 35));

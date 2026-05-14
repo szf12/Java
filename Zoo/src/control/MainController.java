@@ -10,7 +10,8 @@ package control;
  */
 public class MainController {
     
-    private FormController formCrl;
+    private FormController formCtrl;
+    private DatabaseController dbCtrl;
 
     public MainController() {
         
@@ -19,7 +20,8 @@ public class MainController {
    
    private void start() {
        
-       formCrl = new FormController();
-       formCrl.start();
+       dbCtrl = new DatabaseController();
+       formCtrl = new FormController( dbCtrl );
+       formCtrl.start();
    } 
 }
